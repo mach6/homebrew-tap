@@ -1,8 +1,8 @@
 class GoCovercheck < Formula
   desc "Fast, flexible CLI tool for enforcing test coverage thresholds in Go projects"
   homepage "https://github.com/mach6/go-covercheck"
-  url "https://github.com/mach6/go-covercheck/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "42e9e26436cf727472424b6eb144e2e6d5ef79f01d0dba981bcae2842ccf9362"
+  url "https://github.com/mach6/go-covercheck/archive/refs/tags/v0.5.1-pre.tar.gz"
+  sha256 "85829046fdf8bc23c45e8ba34d79e07bdd6cbfea69c4962dab5d71779132c278"
   license "MIT"
 
   depends_on "go" => :build
