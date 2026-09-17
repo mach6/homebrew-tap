@@ -18,13 +18,14 @@ if command -v brew >/dev/null 2>&1; then
 
     # Test the formula
     echo "🔍 Auditing formula..."
-    brew audit --strict go-covercheck.rb || echo "⚠️  Audit warnings (may be expected)"
+    brew audit --strict --online mach6/tap/go-covercheck || echo "⚠️  Audit warnings (may be expected)"
 
     echo "🧪 Testing formula installation..."
-    brew install --build-from-source go-covercheck.rb
+    brew install --build-from-source mach6/tap/go-covercheck
+    brew test mach6/tap/go-covercheck
 
     echo "🔧 Testing installed binary..."
-    go-covercheck --version
+    "$(brew --prefix)/bin/go-covercheck" --version
 
     echo "✅ All tests passed!"
 else
